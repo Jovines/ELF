@@ -1,7 +1,8 @@
-package com.tree.shu.elf
+package com.tree.shu.elf.view.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.tree.shu.elf.R
 
 class MainActivity : AppCompatActivity() {
 
