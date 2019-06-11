@@ -12,6 +12,27 @@
 
 - mvp
 
+  > - MVP架构说明（base目录）
+  >
+  >   > - 接口：IBaseView、IBasePresenter、IBaseModel 只包含一些最基本的方法
+  >   > - 使用：创建自己需要的接口继承上面的接口，根据你们自己的需求添加方法。
+  >   >
+  >   >   >e.g.
+  >   >   >
+  >   >   >```kotlin
+  >   >   >interface IMainModel: IBaseModel {
+  >   >   >fun getData(url: String, callback: Callback) { /*...*/ }
+  >   >   >
+  >   >   >/*根据自己的需求创建一个Callback，能用lambda就用lambda*/
+  >   >   >interface Callback {
+  >   >   >   fun onSuccess(result: String) { /*...*/ }
+  >   >   >   fun onFailed(e: Exception) { /*...*/ }
+  >   >   >}
+  >   >   >}
+  >   >   >```
+
+
+
 ## 包目录说明
 
 - base
@@ -58,24 +79,7 @@
 
 
 
-- MVP
 
-  > - 接口：IBaseView、IBasePresenter、IBaseModel 只包含一些最基本的方法
-  > - 使用：创建自己需要的接口继承上面的接口，根据你们自己的需求添加方法。
-  >
-  >   >e.g.
-  >   >
-  >   >```kotlin
-  >   >interface IMainModel: IBaseModel {
-  >   >    fun getData(url: String, callback: Callback) { /*...*/ }
-  >   >
-  >   >    /*根据自己的需求创建一个Callback，能用lambda就用lambda*/
-  >   >    interface Callback {
-  >   >        fun onSuccess(result: String) { /*...*/ }
-  >   >        fun onFailed(e: Exception) { /*...*/ }
-  >   >    }
-  >   >}
-  >   >```
 
 
 
