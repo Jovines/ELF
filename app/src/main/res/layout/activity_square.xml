@@ -8,6 +8,28 @@
         android:orientation="vertical"
         tools:context=".view.activity.SquareActivity">
 
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back"
+            android:background="@color/toolbarBackground">
+
+        <TextView
+                android:id="@+id/toolbar_title"
+                android:text="一些想说的"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#000000" />
+    </android.support.v7.widget.Toolbar>
+
+    <View
+            android:background="#E5E5E5"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
     <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_square"
             android:layout_width="match_parent"
